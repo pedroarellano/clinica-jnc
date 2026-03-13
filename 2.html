@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Javiera Nally - Odontología General y Rehabilitación Oral</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts: DM Serif Display para títulos, Inter para cuerpo -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Serif+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Paleta: Sand, Bone, Clay y el nuevo Sage Green */
+            --color-bg-base: #FAF9F6;
+            --color-bg-sand: #F2EFE9;
+            --color-bg-clay: #EAE5DD;
+            --color-bg-bone: #F5F2ED;
+            --color-bg-sage: #E0EADF; /* Verde fresco e higiénico */
+            
+            --color-primary: #1A1A1A;
+            --color-accent: #BFA37E;
+            --radius-lg: 3.5rem;
+            --radius-btn: 9999px;
+        }
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--color-bg-base); 
+            color: var(--color-primary);
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, .font-serif { 
+            font-family: 'DM Serif Display', serif; 
+        }
+
+        /* Efecto de Grabado Sutil / Sello */
+        .grain-overlay {
+            position: relative;
+        }
+        .grain-overlay::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.03;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        .btn-luxury {
+            background-color: var(--color-primary);
+            color: white;
+            border-radius: var(--radius-btn);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            letter-spacing: 0.05em;
+        }
+
+        .btn-luxury:hover {
+            background-color: var(--color-accent);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -10px rgba(191, 163, 126, 0.6);
+        }
+
+        .btn-luxury-outline {
+            border: 1px solid var(--color-primary);
+            color: var(--color-primary);
+            border-radius: var(--radius-btn);
+            transition: all 0.4s;
+            letter-spacing: 0.05em;
+        }
+
+        .btn-luxury-outline:hover {
+            background-color: var(--color-primary);
+            color: white;
+        }
+
+        /* Descalces tipográficos e layouts asimétricos */
+        .offset-header {
+            transform: translateY(2rem);
+            position: relative;
+            z-index: 10;
+        }
+
+        .card-service {
+            background: white;
+            border: 1px solid rgba(0,0,0,0.02);
+            border-radius: var(--radius-lg);
+            transition: all 0.4s ease;
+        }
+
+        .card-service:hover {
+            border-color: var(--color-accent);
+            transform: translateY(-8px);
+        }
+
+        header {
+            backdrop-filter: blur(15px);
+            background-color: rgba(250, 249, 246, 0.85);
+        }
+
+        .accent-line {
+            width: 40px;
+            height: 1px;
+            background-color: var(--color-accent);
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 12px;
+        }
+
+        /* Bloques de color descalzados */
+        .bg-sage { background-color: var(--color-bg-sage); }
+        .bg-sand { background-color: var(--color-bg-sand); }
+        .bg-clay { background-color: var(--color-bg-clay); }
+        
+        .hero-split-bg {
+            background: linear-gradient(to right, var(--color-bg-sand) 60%, var(--color-bg-base) 60%);
+        }
+
+        @media (max-width: 1024px) {
+            .hero-split-bg { background: var(--color-bg-sand); }
+        }
+
+        /* Imagen estilo grabado */
+        .image-reveal {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.05), 10px 10px 30px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen grain-overlay">
+
+    <!-- TOP BAR -->
+    <div class="bg-slate-900 text-slate-200 text-[10px] md:text-xs py-2.5 text-center px-4 font-medium tracking-wide">
+        Odontología General y Rehabilitación Oral en Viña del Mar y Concón / Reñaca
+    </div>
+
+    <!-- HEADER -->
+    <header class="border-b border-gray-100 sticky top-0 z-50">
+        <div class="container mx-auto px-6 h-24 flex justify-between items-center">
+            <div class="flex flex-col">
+                <span class="text-2xl font-bold tracking-tight text-gray-900 uppercase font-serif">Dra. Javiera Nally</span>
+                <span class="text-[0.6rem] md:text-[0.7rem] text-gray-400 tracking-[0.2em] uppercase font-semibold">Odontología General y Rehabilitación Oral</span>
+            </div>
+            
+            <nav class="hidden lg:flex items-center space-x-10 text-[0.75rem] uppercase tracking-widest font-medium text-gray-500">
+                <a href="#inicio" class="hover:text-black transition">Inicio</a>
+                <a href="#tratamientos" class="hover:text-black transition">Tratamientos</a>
+                <a href="#agenda" class="hover:text-black transition">Ubicaciones</a>
+                <a href="#sobre-mi" class="hover:text-black transition">Sobre Mí</a>
+            </nav>
+
+            <div class="hidden md:block">
+                <a href="#agenda" id="header-cta" class="btn-luxury px-8 py-3.5 text-[0.7rem] font-bold uppercase tracking-widest">
+                    Reservar Hora
+                </a>
+            </div>
+
+            <div class="md:hidden text-xl text-gray-700">
+                <i class="fas fa-bars-staggered"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION (Asimétrico) -->
+    <section id="inicio" class="hero-split-bg py-20 lg:py-32 overflow-visible">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
+                
+                <!-- Columna 1: Contenido con descalce -->
+                <div class="space-y-10 lg:pr-12 relative">
+                    <div id="hero-badge" class="inline-block border border-[#BFA37E] text-[#BFA37E] text-[10px] font-bold px-5 py-2 rounded-full uppercase tracking-[0.2em] mb-4 hidden">
+                    </div>
+                    
+                    <h1 class="text-5xl md:text-7xl font-bold leading-[1.1] text-gray-900 offset-header">
+                        Recupera la función y <br>
+                        <span class="italic font-normal text-[#BFA37E]">armonía de tu sonrisa.</span>
+                    </h1>
+                    
+                    <div class="bg-white/40 backdrop-blur-sm p-8 rounded-[2.5rem] relative z-0 border border-white/50">
+                        <p class="text-lg text-gray-700 leading-relaxed font-light mb-8">
+                            Enfoque conservador, preventivo y basado en evidencia científica. Atención personalizada en Viña del Mar y Concón / Reñaca.
+                        </p>
+                        
+                        <div class="flex flex-col sm:flex-row gap-5">
+                            <button id="hero-cta-vina" class="btn-luxury px-10 py-5 text-[0.75rem] font-bold flex flex-col items-center justify-center gap-1 shadow-xl">
+                                <span>AGENDAR EN VIÑA DEL MAR</span>
+                                <span class="text-[9px] opacity-70 font-light tracking-widest block uppercase" id="hero-date-vina">Cargando...</span>
+                            </button>
+                            <button id="hero-cta-concon" class="btn-luxury-outline px-10 py-5 text-[0.75rem] font-bold flex flex-col items-center justify-center gap-1">
+                                <span>AGENDAR EN CONCÓN</span>
+                                <span class="text-[9px] opacity-70 font-light tracking-widest block uppercase" id="hero-date-concon">Cargando...</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-gray-400 flex items-center gap-2 pl-4">
+                        <i class="fas fa-certificate text-[#BFA37E]"></i>
+                        Atención clínica de excelencia en la V Región.
+                    </p>
+                </div>
+                
+                <!-- Columna 2: Imagen Retrato -->
+                <div class="flex justify-center lg:justify-end">
+                    <div class="relative group">
+                        <!-- Marco decorativo asimétrico -->
+                        <div class="absolute -top-6 -left-6 w-32 h-32 border-l border-t border-[#BFA37E] rounded-tl-[3rem] -z-10 opacity-40"></div>
+                        
+                        <div class="image-reveal w-72 h-[480px] md:w-[400px] md:h-[550px] bg-white border-[12px] border-white relative">
+                            <div class="w-full h-full flex items-center justify-center text-gray-300 text-[10px] tracking-widest uppercase font-light bg-sage">
+                                [Imagen Dra. Javiera Nally - Retrato]
+                            </div>
+                            <!-- Sello de autor superpuesto -->
+                            <div class="absolute -bottom-8 -left-8 w-24 h-24 rounded-full bg-white/90 border border-gray-100 shadow-lg flex items-center justify-center text-center p-2 backdrop-blur-md">
+                                <span class="font-serif text-lg leading-none text-gray-900 italic">J. Nally</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FILOSOFÍA (Descalce en cuadrícula) -->
+    <section class="bg-white section-padding">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-start mb-24 gap-8">
+                <div class="max-w-xl offset-header">
+                    <span class="accent-line"></span>
+                    <span class="text-[#BFA37E] uppercase text-[10px] tracking-[0.3em] font-bold">Filosofía de Trabajo</span>
+                    <h2 class="text-5xl md:text-7xl font-bold mt-4">Un enfoque basado <br>en el respeto clínico.</h2>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-16 relative">
+                <div class="hidden md:block absolute top-12 left-0 w-full h-px bg-gray-100 -z-10"></div>
+                
+                <div class="space-y-6 pt-12">
+                    <div class="w-16 h-16 rounded-full bg-sage flex items-center justify-center text-gray-900 text-lg font-serif shadow-inner">01</div>
+                    <h3 class="text-3xl font-bold italic text-gray-900">Conservador</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed font-light">
+                        Intervenciones mínimamente invasivas para preservar la estructura dental natural y evitar sobretratamientos innecesarios.
+                    </p>
+                </div>
+                <div class="space-y-6 pt-12 transform md:translate-y-8">
+                    <div class="w-16 h-16 rounded-full bg-sand flex items-center justify-center text-gray-900 text-lg font-serif shadow-inner">02</div>
+                    <h3 class="text-3xl font-bold italic text-gray-900">Cercano</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed font-light">
+                        Educación y comunicación constante. Mi prioridad es que entiendas cada fase de tu diagnóstico y participes en las decisiones.
+                    </p>
+                </div>
+                <div class="space-y-6 pt-12 transform md:translate-y-16">
+                    <div class="w-16 h-16 rounded-full bg-clay flex items-center justify-center text-gray-900 text-lg font-serif shadow-inner">03</div>
+                    <h3 class="text-3xl font-bold italic text-gray-900">Científico</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed font-light">
+                        Odontología basada en evidencia clínica rigurosa, aplicando protocolos actualizados y materiales de última generación.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRATAMIENTOS (Verde Sage para frescura e higiene) -->
+    <section id="tratamientos" class="bg-sage section-padding rounded-[4rem] mx-4 my-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <h2 class="text-5xl font-bold mb-6 italic text-gray-900">Tratamientos Especializados</h2>
+                <div class="h-px w-24 bg-[#BFA37E] mx-auto mb-8"></div>
+                <p class="text-gray-600 font-light italic">"Soluciones integrales de alta precisión técnica para recuperar la función y estética oral."</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-10">
+                <div class="card-service p-12 flex flex-col h-full bg-white/80 backdrop-blur-md border-white">
+                    <div class="text-[10px] text-[#BFA37E] font-bold tracking-[0.3em] uppercase mb-6">Rehabilitación Oral</div>
+                    <h3 class="text-2xl font-bold mb-8 italic text-gray-900">Prótesis Fija y Removible</h3>
+                    <ul class="space-y-5 text-[13px] text-gray-500 font-light flex-grow">
+                        <li class="flex items-center gap-3 border-b border-gray-50 pb-3">Coronas y Puentes Cerámicos</li>
+                        <li class="flex items-center gap-3 border-b border-gray-50 pb-3">Rehabilitación sobre Implantes</li>
+                        <li class="flex items-center gap-3 border-b border-gray-50 pb-3">Puentes de Porcelana y Zirconio</li>
+                        <li class="flex items-center gap-3 border-b border-gray-50 pb-3">Pernos Estéticos de Fibra</li>
+                        <li class="flex items-center gap-3">Prótesis removible de alta gama</li>
+                    </ul>
+                </div>
+                <div class="card-service p-12 flex flex-col h-full bg-white/80 backdrop-blur-md border-white transform lg:-translate-y-8 shadow-2xl">
+                    <div class="text-[10px] text-[#BFA37E] font-bold tracking-[0.3em] uppercase mb-6">Armonía</div>
+                    <h3 class="text-2xl font-bold mb-8 italic text-gray-900">Estética Avanzada</h3>
+                    <ul class="space-y-5 text-[13px] text-gray-500 font-light flex-grow">
+                        <li class="flex items-center gap-3 border-b border-gray-50 pb-3">Carillas de Porcelana</li>
+                        <li class="flex items-center gap-3 border-b border-gray-50 pb-3">Lentes de Contacto Dentales</li>
+                        <li class="flex items-center gap-3 border-b border-gray-50 pb-3">Resinas Fotocuradas Estéticas</li>
+                        <li class="flex items-center gap-3 border-b border-gray-50 pb-3">Blanqueamiento Clínico</li>
+                        <li class="flex items-center gap-3">Obturaciones Estéticas (Tapaduras)</li>
+                    </ul>
+                </div>
+                <div class="card-service p-12 flex flex-col h-full bg-white/80 backdrop-blur-md border-white">
+                    <div class="text-[10px] text-[#BFA37E] font-bold tracking-[0.3em] uppercase mb-6">Prevención</div>
+                    <h3 class="text-2xl font-bold mb-8 italic text-gray-900">Salud y Prevención</h3>
+                    <ul class="space-y-5 text-[13px] text-gray-500 font-light flex-grow">
+                        <li class="flex items-center gap-3 border-b border-gray-50 pb-3">Primera Visita Odontología</li>
+                        <li class="flex items-center gap-3 border-b border-gray-50 pb-3">Limpieza dental y Destartraje</li>
+                        <li class="flex items-center gap-3 border-b border-gray-50 pb-3">Urgencias dentales (Dolor/Fractura)</li>
+                        <li class="flex items-center gap-3 border-b border-gray-50 pb-3">Educación y Prevención Oral</li>
+                        <li class="flex items-center gap-3">Sellantes y Visitas Sucesivas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE MÍ (Descalce de color) -->
+    <section id="sobre-mi" class="section-padding overflow-hidden">
+        <div class="container mx-auto px-6 relative">
+            <!-- Bloque de color descalzado al fondo -->
+            <div class="absolute top-0 right-0 w-2/3 h-full bg-clay rounded-l-[4rem] -z-10 translate-x-20"></div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-20 max-w-6xl mx-auto">
+                <div class="w-full md:w-1/2">
+                    <div class="image-reveal shadow-2xl relative border-8 border-white">
+                        <div class="aspect-[4/5] bg-white flex items-center justify-center text-gray-300 font-light uppercase tracking-widest text-xs">
+                            [Dra. Nally trabajando - Técnica]
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 space-y-8 bg-white/60 p-10 backdrop-blur-sm rounded-[3rem] border border-white">
+                    <h2 class="text-6xl font-bold italic text-gray-900 transform -translate-x-12">Sobre Mí</h2>
+                    <p class="text-gray-700 leading-relaxed font-light text-base">
+                        Soy Cirujano Dentista especialista en Rehabilitación Oral. Decidí cursar mi postgrado durante 3 años para poder resolver casos de alta complejidad funcional y estética, combinando la precisión técnica con la calidez humana.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed font-light text-base italic">
+                        "Mi filosofía de 'Menos es Más' asegura que tus restauraciones duren más tiempo y tu boca se mantenga sana de manera integral."
+                    </p>
+                    <div class="grid grid-cols-2 gap-10 pt-8 border-t border-gray-200">
+                        <div>
+                            <span class="block text-4xl font-bold font-serif text-[#BFA37E]">12+</span>
+                            <span class="text-[10px] text-gray-500 uppercase tracking-[0.2em] mt-1 block font-bold">Años de experiencia clínica</span>
+                        </div>
+                        <div>
+                            <span class="block text-4xl font-bold font-serif text-[#BFA37E]">🎓</span>
+                            <span class="text-[10px] text-gray-500 uppercase tracking-[0.2em] mt-1 block font-bold">Postgrado Especialidad</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UBICACIONES -->
+    <section id="agenda" class="bg-white section-padding">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl font-bold uppercase tracking-[0.2em] text-gray-900">Atención</h2>
+                <div class="h-1 w-20 bg-sage mx-auto mt-4 rounded-full"></div>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12 justify-center max-w-6xl mx-auto">
+                <!-- VIÑA -->
+                <div class="card-service p-12 w-full lg:w-3/5 flex flex-col border-2 border-slate-900 relative shadow-2xl">
+                    <div class="absolute top-0 right-0 bg-slate-900 text-white text-[9px] font-bold px-8 py-3 rounded-bl-3xl uppercase tracking-[0.3em]">Sede Principal</div>
+                    <h3 class="text-4xl font-bold italic mb-6">Viña del Mar</h3>
+                    <p class="text-gray-500 font-light mb-8 text-sm flex items-center gap-2">
+                        <i class="fas fa-map-marker-alt text-[#BFA37E]"></i> Av. Libertad 269, Of. 605. Edificio Libertad.
+                    </p>
+                    <div class="w-full h-64 bg-bone rounded-[2.5rem] mb-10 border border-gray-100 flex items-center justify-center text-gray-300 text-[10px] tracking-widest uppercase font-light">
+                        [Mapa Viña del Mar]
+                    </div>
+                    <button id="vina-cta-card" class="mt-auto w-full btn-luxury py-6 font-bold text-[0.8rem] flex flex-col items-center justify-center gap-1 shadow-lg">
+                        <span>RESERVAR EN VIÑA (DENTALINK)</span>
+                        <span class="text-[9px] font-light opacity-60 uppercase" id="vina-date-card">Próximo martes...</span>
+                    </button>
+                </div>
+                <!-- CONCÓN -->
+                <div class="card-service p-12 w-full lg:w-2/5 flex flex-col bg-sage/20 border-sage/50 shadow-sm">
+                    <h3 class="text-4xl font-bold italic mb-6">Concón</h3>
+                    <p class="text-gray-500 font-light mb-8 text-sm leading-relaxed">Las Pelargonias 842, Of. 805. <br>Clínica Afiora.</p>
+                    <div class="bg-white/80 text-green-800 px-4 py-2 rounded-full text-[9px] mb-8 inline-flex items-center gap-2 font-bold uppercase tracking-widest self-start shadow-sm border border-white">
+                        <i class="fas fa-parking"></i> Estacionamiento disponible
+                    </div>
+                    <div class="h-48 bg-white/40 rounded-[2rem] mb-10 border border-white/60 flex items-center justify-center text-gray-300 text-[10px] tracking-widest uppercase font-light">
+                        [Mapa Concón]
+                    </div>
+                    <button id="concon-cta-card" class="mt-auto w-full btn-luxury-outline py-6 font-bold text-[0.8rem] flex flex-col items-center justify-center gap-1">
+                        <span>SOLICITAR EN CONCÓN (WHATSAPP)</span>
+                        <span class="text-[9px] font-light opacity-50 uppercase tracking-widest" id="concon-date-card">Martes AM</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER (Diseño Sello) -->
+    <footer class="bg-slate-900 text-white pt-24 pb-12 rounded-t-[5rem]">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-16 mb-20 text-center md:text-left">
+                <div class="space-y-6">
+                    <div class="font-serif text-3xl italic text-white/90">J. Nally</div>
+                    <p class="text-gray-500 text-sm leading-relaxed font-light">
+                        Rehabilitación Oral y Estética Dental de alta complejidad. Atención bajo evidencia científica en la V Región de Chile.
+                    </p>
+                </div>
+                <div class="space-y-6">
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-sage">Contacto</h4>
+                    <ul class="space-y-5 text-sm text-gray-400 font-light">
+                        <li class="flex items-center gap-4 justify-center md:justify-start">
+                            <span class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-sage"><i class="far fa-envelope"></i></span>
+                            contacto@drajavieranally.cl
+                        </li>
+                        <li class="flex items-center gap-4 justify-center md:justify-start">
+                            <span class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-sage"><i class="fab fa-whatsapp"></i></span>
+                            +56 9 XXXX XXXX
+                        </li>
+                    </ul>
+                </div>
+                <div class="space-y-6">
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-[#BFA37E]">Legal</h4>
+                    <ul class="space-y-4 text-sm text-gray-400 font-light">
+                        <li>Registro Superintendencia: XXXXX</li>
+                        <li><a href="#" class="hover:text-white transition underline underline-offset-8 decoration-1 decoration-sage/30">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/5 pt-12 text-center text-[9px] text-gray-600 uppercase tracking-[0.6em]">
+                &copy; 2024 Dra. Javiera Nally • Diseño y Desarrollo Web Boutique
+            </div>
+        </div>
+    </footer>
+
+    <!-- LOGICA DE CTAs DINÁMICOS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            updateDynamicCTAs();
+        });
+
+        function getNextTuesdayInfo() {
+            const now = new Date();
+            const dayOfWeek = now.getDay(); 
+            const targetDay = 2; // Martes
+            let dateMsg = "";
+            let isToday = (dayOfWeek === targetDay);
+            if (isToday) {
+                dateMsg = "HOY MARTES";
+            } else {
+                let daysToAdd = (targetDay + 7 - dayOfWeek) % 7;
+                if (daysToAdd === 0) daysToAdd = 7; 
+                const nextDate = new Date(now);
+                nextDate.setDate(now.getDate() + daysToAdd);
+                const day = nextDate.getDate().toString().padStart(2, '0');
+                const month = (nextDate.getMonth() + 1).toString().padStart(2, '0');
+                dateMsg = `MARTES ${day}/${month}`;
+            }
+            return { dateMsg, isToday };
+        }
+
+        function updateDynamicCTAs() {
+            const info = getNextTuesdayInfo();
+            const headerBtn = document.getElementById('header-cta');
+            if(headerBtn) headerBtn.innerText = info.isToday ? "Citas Hoy" : `Cita ${info.dateMsg}`;
+            const heroDateVina = document.getElementById('hero-date-vina');
+            if(heroDateVina) heroDateVina.innerText = info.isToday ? "Atención Hoy (Tarde)" : `${info.dateMsg} • PM`;
+            const heroDateConcon = document.getElementById('hero-date-concon');
+            if(heroDateConcon) heroDateConcon.innerText = info.isToday ? "Atención Hoy (Mañana)" : `${info.dateMsg} • AM`;
+            const heroBadge = document.getElementById('hero-badge');
+            if(heroBadge) {
+                heroBadge.innerText = info.isToday ? "Atención hoy en ambas sedes" : `Próxima fecha: ${info.dateMsg}`;
+                heroBadge.classList.remove('hidden');
+            }
+            const vinaCardDate = document.getElementById('vina-date-card');
+            if(vinaCardDate) vinaCardDate.innerText = info.isToday ? "Atención hoy jornada tarde" : `${info.dateMsg} • Tarde`;
+            const conconCardDate = document.getElementById('concon-date-card');
+            if(conconCardDate) conconCardDate.innerText = info.isToday ? "Atención hoy jornada mañana" : `${info.dateMsg} • Mañana`;
+        }
+    </script>
+
+</body>
+</html>

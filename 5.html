@@ -65,13 +65,18 @@
         .faq-item button[aria-expanded="true"]+.faq-content {
             grid-template-rows: 1fr;
         }
+
+        b,
+        strong {
+            font-weight: 800;
+        }
     </style>
 </head>
 
 <body class="antialiased overflow-x-hidden">
 
     <!-- Top Bar -->
-    <div class="bg-charcoal text-white text-[10px] md:text-xs py-2.5 text-center px-4 font-medium tracking-wide">
+    <div class="bg-charcoal text-white text-sm md:text-sm py-2.5 text-center px-4 font-medium tracking-wide">
         Encuentra una hora al dentista en <b>Viña del Mar</b> y <b>Concón / Reñaca</b>.
     </div>
 
@@ -83,7 +88,7 @@
                     class="text-3xl md:text-4xl font-bold tracking-tight text-charcoal font-serif whitespace-nowrap">
                     Dra. Javiera Nally
                 </a>
-                <div class="text-[0.65rem] md:text-sm text-taupe uppercase font-bold mt-1 leading-tight flex flex-col">
+                <div class="text-xs md:text-sm text-taupe uppercase font-bold mt-1 leading-tight flex flex-col">
                     <span class="tracking-[0.15em] md:tracking-[0.2em] block whitespace-nowrap">Odontología
                         General</span>
                     <span class="tracking-[0.05em] md:tracking-[0.14em] block whitespace-nowrap">Rehabilitación
@@ -141,7 +146,7 @@
                         <span class="font-normal text-accent-dark">armonía
                             de tu sonrisa.</span>
                     </h1>
-                    <p class="font-sans text-taupe text-base md:text-lg leading-relaxed font-light max-w-xl mb-10">
+                    <p class="font-sans text-taupe text-base md:text-lg leading-relaxed max-w-xl mb-10">
                         Si tienes dientes desgastados, fracturados o buscas mejorar tu sonrisa, te
                         ofrezco una solución clínica <b>personalizada</b>, <b>amable</b> y <b>predecible</b>. Agenda una
                         hora en Viña del Mar
@@ -150,15 +155,15 @@
                     <div class="flex flex-col sm:flex-row gap-4 pt-2">
                         <a href="#ubicaciones"
                             class="inline-flex flex-col items-center justify-center px-8 py-4 bg-charcoal text-white rounded-full shadow-lg min-w-[200px] hover:bg-opacity-90 transition-colors">
-                            <span class="text-[0.75rem] font-bold uppercase tracking-widest">Agendar en Viña del
+                            <span class="text-sm font-bold uppercase tracking-widest">Agendar en Viña del
                                 Mar</span>
-                            <span class="text-xs font-normal mt-1 capitalize text-accent"><i
+                            <span class="text-sm font-normal mt-1 capitalize text-accent"><i
                                     class="fab fa-whatsapp"></i> Reservar por WhatsApp</span>
                         </a>
                         <a href="#ubicaciones"
                             class="inline-flex flex-col items-center justify-center px-8 py-4 border border-charcoal text-charcoal rounded-full min-w-[200px] hover:bg-sand transition-colors">
-                            <span class="text-[0.75rem] font-bold uppercase tracking-widest">Agendar en Concón</span>
-                            <span class="text-xs font-normal mt-1 capitalize text-taupe"><i class="fab fa-whatsapp"></i>
+                            <span class="text-sm font-bold uppercase tracking-widest">Agendar en Concón</span>
+                            <span class="text-sm font-normal mt-1 capitalize text-taupe"><i class="fab fa-whatsapp"></i>
                                 Contactar por WhatsApp</span>
                         </a>
                     </div>
@@ -181,9 +186,10 @@
         <section id="tratamientos" class="container mx-auto px-4 py-16 md:py-24">
             <div class="text-center mb-12">
                 <span
-                    class="text-accent uppercase text-[10px] tracking-[0.3em] font-bold block mb-4">Especialidades</span>
-                <h2 class="font-serif font-bold text-4xl md:text-5xl text-charcoal mb-8">Tratamientos a tu medida</h2>
-                <p class="font-sans text-taupe text-base font-light max-w-3xl mx-auto leading-relaxed">
+                    class="text-accent uppercase text-sm tracking-[0.3em] font-bold block mb-4">Especialidades</span>
+                <h2 class="font-serif font-bold text-4xl md:text-5xl text-charcoal mb-8">Tratamientos a la medida del
+                    paciente</h2>
+                <p class="font-sans text-taupe text-lg max-w-3xl mx-auto leading-relaxed">
                     Entiendo que cada sonrisa es única. Por eso trabajo con planes de tratamiento personalizados,
                     explicando cada etapa del proceso para que tomes decisiones informadas y te sientas seguro. Mi
                     compromiso es ofrecer atención cercana, tecnología actual y resultados que mejoren tu calidad de
@@ -198,7 +204,7 @@
                         <i class="fa-solid fa-tooth text-charcoal/80"></i>
                     </div>
                     <h4 class="font-serif font-bold text-2xl mb-4 text-charcoal">Rehabilitación Oral</h4>
-                    <p class="font-sans text-taupe text-sm font-light leading-relaxed">
+                    <p class="font-sans text-taupe text-base  leading-relaxed">
                         Solución para dientes muy desgastados, fracturados o espacios por piezas perdidas. Restauramos
                         la función masticatoria de forma definitiva.
                     </p>
@@ -210,7 +216,7 @@
                         <i class="fa-solid fa-wand-magic-sparkles text-charcoal/80"></i>
                     </div>
                     <h4 class="font-serif font-bold text-2xl mb-4 text-charcoal">Estética Dental</h4>
-                    <p class="font-sans text-taupe text-sm font-light leading-relaxed">
+                    <p class="font-sans text-taupe text-base  leading-relaxed">
                         Tratamientos para dientes con restauraciones antiguas, cambios de forma o color. Más confianza
                         para sonreír, hablar y relacionarte.
                     </p>
@@ -222,7 +228,7 @@
                         <i class="fa-solid fa-shield-heart text-charcoal/80"></i>
                     </div>
                     <h4 class="font-serif font-bold text-2xl mb-4 text-charcoal">Odontología Preventiva</h4>
-                    <p class="font-sans text-taupe text-sm font-light leading-relaxed">
+                    <p class="font-sans text-taupe text-base  leading-relaxed">
                         Un diagnóstico oportuno permite evitar tratamientos más complejos y mantener la salud de tu boca
                         durante muchos años.
                     </p>
@@ -244,7 +250,7 @@
                     </div>
                     <div class="p-10 pb-6 flex-grow">
                         <h3 class="font-serif text-3xl text-charcoal font-bold mb-4">Viña del Mar</h3>
-                        <p class="font-sans text-taupe text-sm flex items-center gap-2">
+                        <p class="font-sans text-taupe text-base flex items-center gap-2">
                             <i class="fas fa-map-marker-alt text-accent"></i> Av. Libertad 269, Of. 605. Edificio
                             Libertad.
                         </p>
@@ -257,9 +263,9 @@
                     </div>
                     <div class="p-10 flex flex-col items-center">
                         <a href="https://wa.me/num" target="_blank"
-                            class="w-full bg-charcoal text-white py-4 rounded-full font-bold text-[0.75rem] uppercase tracking-widest hover:bg-opacity-90 flex flex-col items-center justify-center transition-opacity text-center">
+                            class="w-full bg-charcoal text-white py-4 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-opacity-90 flex flex-col items-center justify-center transition-opacity text-center">
                             <span>Reservar en Viña del Mar</span>
-                            <span class="text-xs font-normal mt-1 capitalize text-accent flex items-center gap-1"><i
+                            <span class="text-sm font-normal mt-1 capitalize text-accent flex items-center gap-1"><i
                                     class="fab fa-whatsapp"></i> [Link WhatsApp VDM]</span>
                         </a>
                     </div>
@@ -270,12 +276,12 @@
                     class="bg-white border border-sand rounded-[3rem] overflow-hidden flex flex-col relative shadow-sm">
                     <div class="p-10 pb-6 flex-grow">
                         <h3 class="font-serif text-3xl text-charcoal font-bold mb-4">Concón / Reñaca</h3>
-                        <p class="font-sans text-taupe text-sm flex items-center gap-2 mb-4">
+                        <p class="font-sans text-taupe text-base flex items-center gap-2 mb-4">
                             <i class="fas fa-map-marker-alt text-accent"></i> Las Pelargonias 842, Of. 805. Clínica
                             Afiora.
                         </p>
                         <div
-                            class="inline-flex items-center gap-2 bg-sage/60 text-charcoal px-4 py-2 rounded-full text-xs font-semibold shadow-sm border border-sage">
+                            class="inline-flex items-center gap-2 bg-sage/60 text-charcoal px-4 py-2 rounded-full text-sm font-semibold shadow-sm border border-sage">
                             <i class="fas fa-parking text-accent"></i> Estacionamiento pagado disponible
                         </div>
                     </div>
@@ -287,9 +293,9 @@
                     </div>
                     <div class="p-10 flex flex-col items-center">
                         <a href="https://wa.me/num" target="_blank"
-                            class="w-full border border-charcoal text-charcoal py-4 rounded-full font-bold text-[0.75rem] uppercase tracking-widest hover:bg-sand flex flex-col items-center justify-center transition-colors text-center">
+                            class="w-full border border-charcoal text-charcoal py-4 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-sand flex flex-col items-center justify-center transition-colors text-center">
                             <span>Consultar en Concón</span>
-                            <span class="text-xs font-normal mt-1 capitalize text-taupe flex items-center gap-1"><i
+                            <span class="text-sm font-normal mt-1 capitalize text-taupe flex items-center gap-1"><i
                                     class="fab fa-whatsapp"></i> [Link WhatsApp Concón]</span>
                         </a>
                     </div>
@@ -308,29 +314,29 @@
                 </div>
                 <div class="order-1 lg:order-2 text-left">
                     <span
-                        class="text-accent uppercase text-[10px] tracking-[0.3em] font-bold block mb-4">Trayectoria</span>
+                        class="text-accent uppercase text-sm tracking-[0.3em] font-bold block mb-4">Trayectoria</span>
                     <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl mb-8 text-charcoal font-bold">
                         Dra. Javiera Nally - Especialista en Rehabilitación Oral
                     </h2>
-                    <p class="font-sans text-charcoal leading-relaxed font-light text-base md:text-lg mb-8">
+                    <p class="font-sans text-charcoal leading-relaxed  text-base md:text-lg mb-8">
                         Soy Cirujano Dentista especialista en Rehabilitación Oral. A través de un enfoque clínico
                         personalizado y riguroso, planifico cada tratamiento para lograr resultados duraderos y
                         naturales, combinando la precisión técnica con la calidez humana.
                     </p>
                     <p
-                        class="font-sans text-taupe leading-relaxed font-light text-base border-l-2 border-accent pl-6 mb-10">
+                        class="font-sans text-taupe leading-relaxed  text-base border-l-2 border-accent pl-6 mb-10">
                         "Mi filosofía de 'Menos es Más' asegura que tus restauraciones duren más tiempo y tu sistema
                         masticatorio se mantenga sano de manera integral."
                     </p>
                     <div class="grid grid-cols-2 gap-8 border-t border-sand pt-8 font-sans">
                         <div>
                             <span class="block text-2xl mb-2 text-charcoal">🎓</span>
-                            <span class="text-[10px] text-taupe uppercase tracking-widest font-bold">Postgrado de
+                            <span class="text-sm text-taupe uppercase tracking-widest font-bold">Postgrado de
                                 Especialidad</span>
                         </div>
                         <div>
                             <span class="block text-2xl mb-2 text-charcoal">🔬</span>
-                            <span class="text-[10px] text-taupe uppercase tracking-widest font-bold">Medicina Basada en
+                            <span class="text-sm text-taupe uppercase tracking-widest font-bold">Medicina Basada en
                                 Evidencia</span>
                         </div>
                     </div>
@@ -343,11 +349,11 @@
             <div class="container mx-auto px-4">
                 <div class="flex flex-col lg:flex-row gap-16 items-start">
                     <div class="lg:w-1/3">
-                        <span class="text-accent uppercase text-[10px] tracking-[0.3em] font-bold block mb-4">Filosofía
+                        <span class="text-accent uppercase text-sm tracking-[0.3em] font-bold block mb-4">Filosofía
                             de Trabajo</span>
                         <h2 class="font-serif text-4xl md:text-5xl text-charcoal mb-6">La importancia de la prevención
                         </h2>
-                        <p class="font-sans text-taupe text-base font-light">
+                        <p class="font-sans text-taupe text-lg">
                             Gran parte de los problemas dentales se desarrollan lentamente y pueden prevenirse o
                             tratarse de forma más simple si se detectan a tiempo. No esperes a tener dolor o molestias;
                             una odontología conservadora y basada en evidencia es la clave para proteger tu salud bucal
@@ -359,19 +365,19 @@
                         <div class="bg-white p-8 rounded-3xl border border-transparent shadow-sm">
                             <div class="text-6xl font-serif font-bold text-sage mb-4">01</div>
                             <h3 class="font-serif text-xl mb-3 text-charcoal">Conservador</h3>
-                            <p class="text-sm text-taupe font-sans font-light">Intervenciones mínimamente invasivas para
+                            <p class="text-sm text-taupe font-sans ">Intervenciones mínimamente invasivas para
                                 preservar la estructura natural.</p>
                         </div>
                         <div class="bg-white p-8 rounded-3xl border border-transparent shadow-sm">
                             <div class="text-6xl font-serif font-bold text-sage mb-4">02</div>
                             <h3 class="font-serif text-xl mb-3 text-charcoal">Cercano</h3>
-                            <p class="text-sm text-taupe font-sans font-light">Educación y comunicación constante.
+                            <p class="text-sm text-taupe font-sans ">Educación y comunicación constante.
                                 Entiende cada fase de tu diagnóstico.</p>
                         </div>
                         <div class="bg-white p-8 rounded-3xl border border-transparent shadow-sm">
                             <div class="text-6xl font-serif font-bold text-sage mb-4">03</div>
                             <h3 class="font-serif text-xl mb-3 text-charcoal">Científico</h3>
-                            <p class="text-sm text-taupe font-sans font-light">Odontología basada en evidencia clínica
+                            <p class="text-sm text-taupe font-sans ">Odontología basada en evidencia clínica
                                 rigurosa y protocolos actualizados.</p>
                         </div>
                     </div>
@@ -382,9 +388,9 @@
         <!-- 6. Portafolio (Casos) -->
         <section id="galeria" class="container mx-auto px-4 py-16 md:py-24">
             <div class="text-center mb-16">
-                <span class="text-accent uppercase text-[10px] tracking-[0.3em] font-bold block mb-4">Portafolio</span>
+                <span class="text-accent uppercase text-sm tracking-[0.3em] font-bold block mb-4">Portafolio</span>
                 <h2 class="font-serif font-bold text-3xl md:text-5xl mb-4 text-charcoal">Casos Clínicos Reales</h2>
-                <p class="font-sans text-taupe max-w-2xl mx-auto font-light leading-relaxed">
+                <p class="font-sans text-taupe max-w-2xl mx-auto  leading-relaxed">
                     Resultados funcionales y predecibles diseñados para durar. Planificación clínica orientada a la
                     recuperación integral.
                 </p>
@@ -394,44 +400,44 @@
                 <div
                     class="rounded-[2rem] overflow-hidden group relative aspect-square bg-sand border border-white shadow-sm cursor-pointer">
                     <div
-                        class="absolute inset-0 flex items-center justify-center text-taupe/40 text-xs uppercase tracking-widest font-bold z-0">
+                        class="absolute inset-0 flex items-center justify-center text-taupe/40 text-sm uppercase tracking-widest font-bold z-0">
                         [Foto Caso 1]
                     </div>
                     <div
                         class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-charcoal/90 via-charcoal/40 to-transparent p-6 pt-20 flex flex-col justify-end translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all z-10 duration-500">
                         <h4 class="text-white font-serif text-xl mb-1">Carillas Cerámicas</h4>
-                        <p class="text-white/80 text-xs font-sans font-light">Diseño de sonrisa mínimamente invasivo</p>
+                        <p class="text-white/80 text-sm font-sans ">Diseño de sonrisa mínimamente invasivo</p>
                     </div>
                 </div>
                 <div
                     class="rounded-[2rem] overflow-hidden group relative aspect-square bg-sand border border-white shadow-sm cursor-pointer">
                     <div
-                        class="absolute inset-0 flex items-center justify-center text-taupe/40 text-xs uppercase tracking-widest font-bold z-0">
+                        class="absolute inset-0 flex items-center justify-center text-taupe/40 text-sm uppercase tracking-widest font-bold z-0">
                         [Foto Caso 2]
                     </div>
                     <div
                         class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-charcoal/90 via-charcoal/40 to-transparent p-6 pt-20 flex flex-col justify-end translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all z-10 duration-500">
                         <h4 class="text-white font-serif text-xl mb-1">Rehabilitación Compleja</h4>
-                        <p class="text-white/80 text-xs font-sans font-light">Prótesis fija de zirconio</p>
+                        <p class="text-white/80 text-sm font-sans ">Prótesis fija de zirconio</p>
                     </div>
                 </div>
                 <div
                     class="rounded-[2rem] overflow-hidden group relative aspect-square bg-sand border border-white shadow-sm cursor-pointer">
                     <div
-                        class="absolute inset-0 flex items-center justify-center text-taupe/40 text-xs uppercase tracking-widest font-bold z-0">
+                        class="absolute inset-0 flex items-center justify-center text-taupe/40 text-sm uppercase tracking-widest font-bold z-0">
                         [Foto Caso 3]
                     </div>
                     <div
                         class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-charcoal/90 via-charcoal/40 to-transparent p-6 pt-20 flex flex-col justify-end translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all z-10 duration-500">
                         <h4 class="text-white font-serif text-xl mb-1">Blanqueamiento</h4>
-                        <p class="text-white/80 text-xs font-sans font-light">Aclaramiento y armonía natural</p>
+                        <p class="text-white/80 text-sm font-sans ">Aclaramiento y armonía natural</p>
                     </div>
                 </div>
             </div>
 
             <div class="text-center mt-12">
                 <a href="#"
-                    class="inline-flex items-center gap-2 text-charcoal font-bold text-[0.7rem] tracking-widest uppercase hover:text-accent transition-colors">
+                    class="inline-flex items-center gap-2 text-charcoal font-bold text-sm tracking-widest uppercase hover:text-accent transition-colors">
                     Ver Galería Completa <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>
@@ -440,7 +446,7 @@
         <!-- 7. Preguntas Frecuentes -->
         <section id="faq" class="container mx-auto px-4 py-16 md:py-24 max-w-4xl border-t border-sand">
             <div class="mb-12 text-center">
-                <span class="text-accent uppercase text-[10px] tracking-[0.3em] font-bold block mb-4">Información</span>
+                <span class="text-accent uppercase text-sm tracking-[0.3em] font-bold block mb-4">Información</span>
                 <h2 class="font-serif font-bold text-3xl md:text-5xl mb-4 text-charcoal">Preguntas Frecuentes</h2>
             </div>
             <div class="space-y-4">
@@ -453,7 +459,7 @@
                         <span class="icon-plus text-2xl text-accent transition-transform duration-300">+</span>
                     </button>
                     <div class="faq-content">
-                        <div class="pb-6 text-taupe font-light font-sans leading-relaxed">
+                        <div class="pb-6 text-taupe  font-sans leading-relaxed">
                             La transparencia clínica es fundamental en mi práctica. Puede verificar mi título de
                             Cirujano Dentista y mi especialidad en Rehabilitación Oral directamente en el
                             <strong>Registro Nacional de Prestadores Individuales de Salud</strong>, administrado por la
@@ -472,7 +478,7 @@
                         <span class="icon-plus text-2xl text-accent transition-transform duration-300">+</span>
                     </button>
                     <div class="faq-content">
-                        <div class="pb-6 text-taupe font-light font-sans leading-relaxed">
+                        <div class="pb-6 text-taupe  font-sans leading-relaxed">
                             La evaluación inicial está diseñada para ofrecer un diagnóstico integral de tu salud bucal.
                             Durante esta visita, busco comprender tus necesidades y objetivos, resolver todas tus dudas
                             y proponerte el tratamiento más adecuado.
@@ -493,7 +499,7 @@
                         <span class="icon-plus text-2xl text-accent transition-transform duration-300">+</span>
                     </button>
                     <div class="faq-content">
-                        <div class="pb-6 text-taupe font-light font-sans leading-relaxed">
+                        <div class="pb-6 text-taupe  font-sans leading-relaxed">
                             [Por definir copy final] Sí, atendemos urgencias dentales enfocadas en dolor agudo,
                             fracturas de dientes o problemas
                             con prótesis. Por favor contáctanos vía WhatsApp para evaluar disponibilidad inmediata.
@@ -509,7 +515,7 @@
                         <span class="icon-plus text-2xl text-accent transition-transform duration-300">+</span>
                     </button>
                     <div class="faq-content">
-                        <div class="pb-6 text-taupe font-light font-sans leading-relaxed">
+                        <div class="pb-6 text-taupe  font-sans leading-relaxed">
                             [Por definir copy final] Trabajamos de manera particular para asegurar la máxima calidad.
                             Entregamos toda la documentación necesaria para reembolso en tu Isapre o Seguro
                             Complementario.
@@ -525,7 +531,7 @@
                         <span class="icon-plus text-2xl text-accent transition-transform duration-300">+</span>
                     </button>
                     <div class="faq-content">
-                        <div class="pb-6 text-taupe font-light font-sans leading-relaxed">
+                        <div class="pb-6 text-taupe  font-sans leading-relaxed">
                             [Por definir copy final] La consulta de diagnóstico dura aprox. 30 a 45 minutos. Realizamos
                             un examen clínico completo y fotos intraorales.
                         </div>
@@ -539,7 +545,7 @@
     <footer class="bg-charcoal text-white border-t border-charcoal py-16 px-4">
         <div class="container mx-auto px-4 flex flex-col items-center">
             <h4 class="font-serif text-2xl mb-4">Dra. Javiera Nally</h4>
-            <div class="text-[10px] text-accent font-sans uppercase tracking-[0.3em] font-bold mb-8">
+            <div class="text-sm text-accent font-sans uppercase tracking-[0.3em] font-bold mb-8">
                 Especialista en Rehabilitación Oral
             </div>
 
@@ -554,7 +560,7 @@
                 </a>
             </div>
 
-            <div class="text-center text-xs text-taupe font-sans tracking-widest uppercase">
+            <div class="text-center text-sm text-taupe font-sans tracking-widest uppercase">
                 &copy; Odontología y Rehabilitación Oral
             </div>
         </div>

@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
     <!-- Font Awesome -->
@@ -31,7 +31,7 @@
                         sage: '#F1F5F3',
                     },
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
+                        sans: ['Noto Sans', 'sans-serif'],
                         serif: ['DM Serif Display', 'serif'],
                     }
                 }
@@ -83,35 +83,19 @@
 </head>
 
 <body class="antialiased overflow-x-hidden">
-    <!-- SVG Clip Path Definition -->
-    <svg width="0" height="0" class="absolute pointer-events-none">
-        <defs>
-            <clipPath id="hero-blob" clipPathUnits="objectBoundingBox">
-                <path d="M0.75,0.05 C0.85,0.15 1,0.35 1,0.55 C1,0.75 0.85,0.95 0.65,1 C0.45,1.05 0.15,1 0.05,0.8 C-0.05,0.6 0,0.3 0.2,0.1 C0.4,-0.1 0.65,0 0.75,0.05"></path>
-            </clipPath>
-        </defs>
-    </svg>
-
     <!-- Top Bar -->
     <div class="bg-charcoal text-white text-sm md:text-sm py-2.5 text-center px-4 font-medium tracking-wide">
-        Encuentra una hora al dentista en <b>Viña del Mar</b> y <b>Concón / Reñaca</b>.
+        🦷 Encuentra una hora al dentista en <b>Viña del Mar</b> y <b>Concón</b>.
     </div>
 
     <!-- Navigation -->
     <header class="w-full bg-white border-b border-sand">
         <div class="container mx-auto px-6 py-4 md:py-6 flex justify-between items-center">
-            <div class="flex flex-col text-left">
-                <a href="#"
-                    class="text-3xl md:text-4xl font-bold tracking-tight text-charcoal font-serif whitespace-nowrap">
-                    Dra. Javiera Nally
-                </a>
-                <div class="text-xs md:text-sm text-taupe uppercase font-bold mt-1 leading-tight flex flex-col">
-                    <span class="tracking-[0.15em] md:tracking-[0.2em] block whitespace-nowrap">Odontología
-                        General</span>
-                    <span class="tracking-[0.05em] md:tracking-[0.14em] block whitespace-nowrap">Rehabilitación
-                        Oral</span>
-                </div>
-            </div>
+            <a href="#" class="flex items-center">
+                <img src="logo.svg" alt="Dra. Javiera Nally - Odontología General y Rehabilitación Oral"
+                    class="h-[68px] md:h-[84px] w-auto">
+            </a>
+
             <nav
                 class="hidden md:flex gap-6 lg:gap-8 items-center text-sm lg:text-base uppercase tracking-wider font-semibold text-taupe ml-auto">
                 <a href="#inicio" class="text-charcoal border-b-2 border-accent pb-1 transition-colors">Inicio</a>
@@ -157,11 +141,11 @@
         <!-- 1. Hero (Inicio) -->
         <section id="inicio" class="container mx-auto px-4 py-16 md:py-24 bg-white">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-7 order-2 lg:order-1">
-                    <h1 class="font-bold text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-8 text-charcoal font-serif">
-                        Recupera la función y <br>
-                        <span class="font-normal text-accent-dark">armonía
-                            de tu sonrisa.</span>
+                <div class="lg:col-span-6 order-2 lg:order-1">
+                    <h1
+                        class="font-bold text-4xl md:text-6xl lg:text-[65px] leading-[1.1] mb-8 text-charcoal font-serif">
+                        Atención Odontológica <br>
+                        <span class="font-normal text-accent-dark">para jóvenes y adultos</span>
                     </h1>
                     <p class="font-sans text-taupe text-base md:text-lg leading-relaxed max-w-xl mb-10">
                         Si tienes dientes desgastados, fracturados o buscas mejorar tu sonrisa, te
@@ -185,26 +169,14 @@
                         </a>
                     </div>
                 </div>
-                <div class="lg:col-span-5 order-1 lg:order-2 flex justify-center lg:justify-end">
-                    <div class="relative w-72 h-72 md:w-96 md:h-96 lg:w-[450px] lg:h-[450px]">
-                        <!-- Decorative Blobs -->
-                        <div class="absolute -top-10 -left-10 w-48 h-48 bg-sage rounded-full hero-blob-bg z-0 animate-pulse"></div>
-                        <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-sand rounded-full hero-blob-bg z-0 animate-pulse" style="animation-delay: 2s;"></div>
-                        
-                        <!-- Floating Badge -->
-                        <div
-                            class="absolute top-10 -right-4 w-24 h-24 rounded-full bg-white shadow-xl flex items-center justify-center z-20 border border-sand transform hover:rotate-12 transition-transform duration-500">
-                            <i class="fa-solid fa-tooth text-accent text-2xl mr-1"></i>
-                            <span class="font-serif text-sm font-bold text-charcoal">J. Nally</span>
-                        </div>
+                <div class="lg:col-span-6 order-1 lg:order-2 flex justify-center lg:justify-end">
+                    <div class="relative w-full">
 
-                        <!-- CIPPED IMAGE -->
-                        <div class="w-full h-full blob-clip z-10 relative group">
-                            <img src="hero-woman-smile.jpg"
-                                alt="Dra. Javiera Nally - Especialista en Rehabilitación Oral"
-                                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
-                            <!-- Subtle Inner Border/Glow -->
-                            <div class="absolute inset-0 blob-clip border-8 border-white opacity-20 pointer-events-none"></div>
+
+                        <!-- HERO IMAGE -->
+                        <div class="w-full h-full relative text-right">
+                            <img src="Imagen-hero.jpg" alt="Dra. Javiera Nally - Especialista en Rehabilitación Oral"
+                                class="w-full h-auto ml-auto inline-block">
                         </div>
                     </div>
                 </div>
@@ -214,90 +186,89 @@
         <!-- 2. Tratamientos -->
         <section id="tratamientos" class="w-full bg-sage py-16 md:py-24">
             <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <span class="text-accent uppercase text-sm tracking-[0.3em] font-bold block mb-4">Cada sonrisa es
-                    única</span>
-                <h2 class="font-serif font-bold text-4xl md:text-5xl text-charcoal mb-8">Tratamientos a la medida del
-                    paciente</h2>
-                <p class="font-sans text-taupe text-lg max-w-3xl mx-auto leading-relaxed">
-                    Trabajo con planes de tratamiento personalizados,
-                    explicando cada etapa del proceso para que tomes decisiones informadas y en confianza.<br><br> Mi
-                    compromiso
-                    es <b>atención cercana, tecnología actual y resultados</b> que mejoren tu
-                    calidad
-                    de vida. </p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-16">
-                <!-- Rehabilitación Oral -->
-                <div class="p-8 rounded-[2rem] bg-white border border-taupe/10 shadow-sm hover:shadow-md transition-shadow">
-                    <div
-                        class="w-12 h-12 rounded-xl bg-sage flex items-center justify-center text-charcoal text-xl mb-6">
-                        <i class="fa-solid fa-tooth text-charcoal/80"></i>
-                    </div>
-                    <h4 class="font-serif font-bold text-2xl mb-4 text-charcoal">Rehabilitación Oral</h4>
-                    <p class="font-sans text-taupe text-base leading-relaxed mb-6">
-                        Solución para dientes desgastados, fracturados o espacios por piezas perdidas. Restauramos
-                        la función masticatoria de forma definitiva.
-                    </p>
-                    <ul class="space-y-3 text-sm text-charcoal font-medium font-sans border-t border-sand pt-6">
-                        <li class="flex items-center gap-2">
-                            <div class="w-1.5 h-1.5 bg-accent rounded-full"></div> Coronas y Puentes
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <div class="w-1.5 h-1.5 bg-accent rounded-full"></div> Implantes
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <div class="w-1.5 h-1.5 bg-accent rounded-full"></div> Prótesis Fija Parcial
-                        </li>
-                    </ul>
+                <div class="text-center mb-12">
+                    <span class="text-accent uppercase text-sm tracking-[0.3em] font-bold block mb-4">Cada sonrisa es
+                        única</span>
+                    <h2 class="font-serif font-bold text-4xl md:text-5xl text-charcoal mb-8">Tratamientos a la medida
+                        del
+                        paciente</h2>
                 </div>
-                <!-- Estética Dental -->
-                <div class="p-8 rounded-[2rem] bg-white border border-taupe/10 shadow-sm hover:shadow-md transition-shadow">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-16">
+                    <!-- Rehabilitación Oral -->
                     <div
-                        class="w-12 h-12 rounded-xl bg-sage flex items-center justify-center text-charcoal text-xl mb-6">
-                        <i class="fa-solid fa-wand-magic-sparkles text-charcoal/80"></i>
+                        class="p-8 rounded-[2rem] bg-white border border-taupe/10 shadow-sm hover:shadow-md transition-shadow">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-sage flex items-center justify-center text-charcoal text-xl mb-6">
+                            <i class="fa-solid fa-tooth text-charcoal/80"></i>
+                        </div>
+                        <h4 class="font-serif font-bold text-2xl mb-4 text-charcoal">Rehabilitación Oral</h4>
+                        <p class="font-sans text-taupe text-base leading-relaxed mb-6">
+                            Solución para dientes desgastados, fracturados o espacios por piezas perdidas. Restauramos
+                            la función masticatoria de forma definitiva.
+                        </p>
+                        <ul class="space-y-3 text-sm text-charcoal font-medium font-sans border-t border-sand pt-6">
+                            <li class="flex items-center gap-2">
+                                <div class="w-1.5 h-1.5 bg-accent rounded-full"></div> Coronas y Puentes
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <div class="w-1.5 h-1.5 bg-accent rounded-full"></div> Implantes
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <div class="w-1.5 h-1.5 bg-accent rounded-full"></div> Prótesis Fija Parcial
+                            </li>
+                        </ul>
                     </div>
-                    <h4 class="font-serif font-bold text-2xl mb-4 text-charcoal">Estética Dental</h4>
-                    <p class="font-sans text-taupe text-base leading-relaxed mb-6">
-                        Tratamientos para dientes con restauraciones antiguas, cambios de forma o color. Más confianza
-                        para sonreír, hablar y relacionarte.
-                    </p>
-                    <ul class="space-y-3 text-sm text-charcoal font-medium font-sans border-t border-sand pt-6">
-                        <li class="flex items-center gap-2">
-                            <div class="w-1.5 h-1.5 bg-accent rounded-full"></div> Carillas de Cerámica
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <div class="w-1.5 h-1.5 bg-accent rounded-full"></div> Blanqueamiento Clínico
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <div class="w-1.5 h-1.5 bg-accent rounded-full"></div> Diseño de Sonrisa
-                        </li>
-                    </ul>
-                </div>
-                <!-- Odontología Preventiva -->
-                <div class="p-8 rounded-[2rem] bg-white border border-sand shadow-sm hover:shadow-md transition-shadow">
+                    <!-- Estética Dental -->
                     <div
-                        class="w-12 h-12 rounded-xl bg-sage flex items-center justify-center text-charcoal text-xl mb-6">
-                        <i class="fa-solid fa-shield-heart text-charcoal/80"></i>
+                        class="p-8 rounded-[2rem] bg-white border border-taupe/10 shadow-sm hover:shadow-md transition-shadow">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-sage flex items-center justify-center text-charcoal text-xl mb-6">
+                            <i class="fa-solid fa-wand-magic-sparkles text-charcoal/80"></i>
+                        </div>
+                        <h4 class="font-serif font-bold text-2xl mb-4 text-charcoal">Estética Dental</h4>
+                        <p class="font-sans text-taupe text-base leading-relaxed mb-6">
+                            Tratamientos para dientes con restauraciones antiguas, cambios de forma o color. Más
+                            confianza
+                            para sonreír, hablar y relacionarte.
+                        </p>
+                        <ul class="space-y-3 text-sm text-charcoal font-medium font-sans border-t border-sand pt-6">
+                            <li class="flex items-center gap-2">
+                                <div class="w-1.5 h-1.5 bg-accent rounded-full"></div> Carillas de Cerámica
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <div class="w-1.5 h-1.5 bg-accent rounded-full"></div> Blanqueamiento Clínico
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <div class="w-1.5 h-1.5 bg-accent rounded-full"></div> Diseño de Sonrisa
+                            </li>
+                        </ul>
                     </div>
-                    <h4 class="font-serif font-bold text-2xl mb-4 text-charcoal">Odontología Preventiva</h4>
-                    <p class="font-sans text-taupe text-base leading-relaxed mb-6">
-                        Un diagnóstico oportuno permite evitar tratamientos más complejos y mantener la salud de tu boca
-                        durante muchos años.
-                    </p>
-                    <ul class="space-y-3 text-sm text-charcoal font-medium font-sans border-t border-sand pt-6">
-                        <li class="flex items-center gap-2">
-                            <div class="w-1.5 h-1.5 bg-accent rounded-full"></div> Diagnóstico Temprano
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <div class="w-1.5 h-1.5 bg-accent rounded-full"></div> Limpieza Profunda
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <div class="w-1.5 h-1.5 bg-accent rounded-full"></div> Control de Caries
-                        </li>
-                    </ul>
+                    <!-- Odontología Preventiva -->
+                    <div
+                        class="p-8 rounded-[2rem] bg-white border border-sand shadow-sm hover:shadow-md transition-shadow">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-sage flex items-center justify-center text-charcoal text-xl mb-6">
+                            <i class="fa-solid fa-shield-heart text-charcoal/80"></i>
+                        </div>
+                        <h4 class="font-serif font-bold text-2xl mb-4 text-charcoal">Odontología Preventiva</h4>
+                        <p class="font-sans text-taupe text-base leading-relaxed mb-6">
+                            Un diagnóstico oportuno permite evitar tratamientos más complejos y mantener la salud de tu
+                            boca
+                            durante muchos años.
+                        </p>
+                        <ul class="space-y-3 text-sm text-charcoal font-medium font-sans border-t border-sand pt-6">
+                            <li class="flex items-center gap-2">
+                                <div class="w-1.5 h-1.5 bg-accent rounded-full"></div> Diagnóstico Temprano
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <div class="w-1.5 h-1.5 bg-accent rounded-full"></div> Limpieza Profunda
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <div class="w-1.5 h-1.5 bg-accent rounded-full"></div> Control de Caries
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
             </div>
         </section>
 
@@ -338,7 +309,8 @@
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <div class="p-6 md:p-10 flex flex-col items-center">
-                        <a href="https://wa.me/56932404255?text=Hola%21%20me%20gustar%C3%ADa%20pedir%20hora%20con%20la%20Dra.%20Javiera%20Nally" target="_blank"
+                        <a href="https://wa.me/56932404255?text=Hola%21%20me%20gustar%C3%ADa%20pedir%20hora%20con%20la%20Dra.%20Javiera%20Nally"
+                            target="_blank"
                             class="w-full bg-charcoal text-white py-4 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-opacity-90 flex flex-col items-center justify-center transition-opacity text-center">
                             <span>Agendar en Viña del Mar</span>
                             <span class="text-sm font-normal mt-1 capitalize text-accent flex items-center gap-1"><i
@@ -373,7 +345,8 @@
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <div class="p-6 md:p-10 flex flex-col items-center">
-                        <a href="https://wa.me/56966464899?text=Hola%21%20me%20gustar%C3%ADa%20pedir%20hora%20con%20la%20Dra.%20Javiera%20Nally" target="_blank"
+                        <a href="https://wa.me/56966464899?text=Hola%21%20me%20gustar%C3%ADa%20pedir%20hora%20con%20la%20Dra.%20Javiera%20Nally"
+                            target="_blank"
                             class="w-full border border-charcoal text-charcoal py-4 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-sand flex flex-col items-center justify-center transition-colors text-center">
                             <span>Agendar en Concón</span>
                             <span class="text-sm font-normal mt-1 capitalize text-taupe flex items-center gap-1"><i
@@ -387,30 +360,30 @@
         <!-- 4. Sobre Mí -->
         <section id="sobre-mi" class="w-full bg-sage py-16 md:py-24 border-t border-sand">
             <div class="container mx-auto px-4">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="order-2 lg:order-1 relative">
-                    <div class="w-full max-w-md mx-auto bg-white p-2 rounded-[2.5rem] shadow-2xl">
-                        <img src="https://s3.sa-east-1.amazonaws.com/doctoralia.cl/doctor/c1c464/c1c464dd299ab48f974d95e7f5003dcb_large.jpg"
-                            alt="Profile" class="w-full h-full object-cover rounded-[2rem]">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 lg:order-1 relative">
+                        <div class="w-full max-w-md mx-auto bg-white p-2 rounded-[2.5rem] shadow-2xl">
+                            <img src="https://s3.sa-east-1.amazonaws.com/doctoralia.cl/doctor/c1c464/c1c464dd299ab48f974d95e7f5003dcb_large.jpg"
+                                alt="Profile" class="w-full h-full object-cover rounded-[2rem]">
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2 text-left">
+                        <span class="text-accent uppercase text-sm tracking-[0.3em] font-bold block mb-4">12 años de
+                            experiencia clínica</span>
+                        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl mb-8 text-charcoal font-bold">
+                            Dra. Javiera Nally - Especialista en Rehabilitación Oral
+                        </h2>
+                        <p class="font-sans text-charcoal leading-relaxed  text-base md:text-lg mb-8">
+                            Soy Cirujano Dentista especialista en Rehabilitación Oral. A través de un enfoque clínico
+                            personalizado y riguroso, planifico cada tratamiento para lograr resultados duraderos y
+                            naturales, combinando la precisión técnica con la calidez humana.
+                        </p>
+                        <p class="font-sans text-taupe leading-relaxed  text-base border-l-2 border-accent pl-6 mb-10">
+                            "Mi filosofía de 'Menos es Más' asegura que tus restauraciones duren más tiempo y tu sistema
+                            masticatorio se mantenga sano de manera integral."
+                        </p>
                     </div>
                 </div>
-                <div class="order-1 lg:order-2 text-left">
-                    <span class="text-accent uppercase text-sm tracking-[0.3em] font-bold block mb-4">12 años de
-                        experiencia clínica</span>
-                    <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl mb-8 text-charcoal font-bold">
-                        Dra. Javiera Nally - Especialista en Rehabilitación Oral
-                    </h2>
-                    <p class="font-sans text-charcoal leading-relaxed  text-base md:text-lg mb-8">
-                        Soy Cirujano Dentista especialista en Rehabilitación Oral. A través de un enfoque clínico
-                        personalizado y riguroso, planifico cada tratamiento para lograr resultados duraderos y
-                        naturales, combinando la precisión técnica con la calidez humana.
-                    </p>
-                    <p class="font-sans text-taupe leading-relaxed  text-base border-l-2 border-accent pl-6 mb-10">
-                        "Mi filosofía de 'Menos es Más' asegura que tus restauraciones duren más tiempo y tu sistema
-                        masticatorio se mantenga sano de manera integral."
-                    </p>
-                </div>
-            </div>
             </div>
         </section>
 
@@ -459,99 +432,105 @@
         <!-- 7. Preguntas Frecuentes -->
         <section id="faq" class="w-full bg-sage py-16 md:py-24 border-t border-sand">
             <div class="container mx-auto px-4 max-w-4xl">
-            <div class="mb-12 text-center">
-                <span class="text-accent uppercase text-sm tracking-[0.3em] font-bold block mb-4">Información</span>
-                <h2 class="font-serif font-bold text-3xl md:text-5xl mb-4 text-charcoal">Preguntas Frecuentes</h2>
-            </div>
-            <div class="space-y-4">
-                <div class="faq-item">
-                    <button class="w-full py-6 flex justify-between items-center text-left focus:outline-none group"
-                        aria-expanded="false" onclick="toggleFaq(this)">
-                        <span
-                            class="font-sans font-semibold text-lg text-charcoal group-hover:text-accent transition-colors">¿Cómo
-                            puedo verificar sus credenciales profesionales y especialidad?</span>
-                        <span class="icon-plus text-2xl text-accent transition-transform duration-300">+</span>
-                    </button>
-                    <div class="faq-content">
-                        <div class="pb-6 text-taupe  font-sans leading-relaxed">
-                            La transparencia clínica es fundamental en mi práctica. Puede verificar mi título de
-                            Cirujano Dentista y mi especialidad en Rehabilitación Oral directamente en el
-                            <strong>Registro Nacional de Prestadores Individuales de Salud</strong>, administrado por la
-                            Superintendencia de Salud de Chile.
-                            <br><br>
-                            Mi número de registro oficial es: <strong>282469</strong>.
+                <div class="mb-12 text-center">
+                    <span class="text-accent uppercase text-sm tracking-[0.3em] font-bold block mb-4">Información</span>
+                    <h2 class="font-serif font-bold text-3xl md:text-5xl mb-4 text-charcoal">Preguntas Frecuentes</h2>
+                </div>
+                <div class="space-y-4">
+                    <div class="faq-item">
+                        <button class="w-full py-6 flex justify-between items-center text-left focus:outline-none group"
+                            aria-expanded="false" onclick="toggleFaq(this)">
+                            <span
+                                class="font-sans font-semibold text-lg text-charcoal group-hover:text-accent transition-colors">¿Cómo
+                                puedo verificar sus credenciales profesionales y especialidad?</span>
+                            <span class="icon-plus text-2xl text-accent transition-transform duration-300">+</span>
+                        </button>
+                        <div class="faq-content">
+                            <div class="pb-6 text-taupe  font-sans leading-relaxed">
+                                La transparencia clínica es fundamental en mi práctica. Puede verificar mi título de
+                                Cirujano Dentista y mi especialidad en Rehabilitación Oral directamente en el
+                                <strong>Registro Nacional de Prestadores Individuales de Salud</strong>, administrado
+                                por la
+                                Superintendencia de Salud de Chile.
+                                <br><br>
+                                Mi número de registro oficial es: <strong>282469</strong>.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="w-full py-6 flex justify-between items-center text-left focus:outline-none group"
+                            aria-expanded="false" onclick="toggleFaq(this)">
+                            <span
+                                class="font-sans font-semibold text-lg text-charcoal group-hover:text-accent transition-colors">¿Qué
+                                esperar en tu primera visita?</span>
+                            <span class="icon-plus text-2xl text-accent transition-transform duration-300">+</span>
+                        </button>
+                        <div class="faq-content">
+                            <div class="pb-6 text-taupe  font-sans leading-relaxed">
+                                La evaluación inicial está diseñada para ofrecer un diagnóstico integral de tu salud
+                                bucal.
+                                Durante esta visita, busco comprender tus necesidades y objetivos, resolver todas tus
+                                dudas
+                                y proponerte el tratamiento más adecuado.
+                                <br><br>
+                                Te explicaré de manera clara tu situación dental y las opciones disponibles, para que
+                                tomes
+                                decisiones informadas con tranquilidad. Mi objetivo es que te sientas acompañado en cada
+                                etapa del tratamiento, recibiendo una atención cercana, profesional y enfocada en tu
+                                bienestar.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="w-full py-6 flex justify-between items-center text-left focus:outline-none group"
+                            aria-expanded="false" onclick="toggleFaq(this)">
+                            <span
+                                class="font-sans font-semibold text-lg text-charcoal group-hover:text-accent transition-colors">¿Atienden
+                                urgencias dentales?</span>
+                            <span class="icon-plus text-2xl text-accent transition-transform duration-300">+</span>
+                        </button>
+                        <div class="faq-content">
+                            <div class="pb-6 text-taupe  font-sans leading-relaxed">
+                                [Por definir copy final] Sí, atendemos urgencias dentales enfocadas en dolor agudo,
+                                fracturas de dientes o problemas
+                                con prótesis. Por favor contáctanos vía WhatsApp para evaluar disponibilidad inmediata.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="w-full py-6 flex justify-between items-center text-left focus:outline-none group"
+                            aria-expanded="false" onclick="toggleFaq(this)">
+                            <span
+                                class="font-sans font-semibold text-lg text-charcoal group-hover:text-accent transition-colors">¿Qué
+                                seguros o convenios tienen?</span>
+                            <span class="icon-plus text-2xl text-accent transition-transform duration-300">+</span>
+                        </button>
+                        <div class="faq-content">
+                            <div class="pb-6 text-taupe  font-sans leading-relaxed">
+                                [Por definir copy final] Trabajamos de manera particular para asegurar la máxima
+                                calidad.
+                                Entregamos toda la documentación necesaria para reembolso en tu Isapre o Seguro
+                                Complementario.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="w-full py-6 flex justify-between items-center text-left focus:outline-none group"
+                            aria-expanded="false" onclick="toggleFaq(this)">
+                            <span
+                                class="font-sans font-semibold text-lg text-charcoal group-hover:text-accent transition-colors">¿Cuánto
+                                dura una evaluación?</span>
+                            <span class="icon-plus text-2xl text-accent transition-transform duration-300">+</span>
+                        </button>
+                        <div class="faq-content">
+                            <div class="pb-6 text-taupe  font-sans leading-relaxed">
+                                [Por definir copy final] La consulta de diagnóstico dura aprox. 30 a 45 minutos.
+                                Realizamos
+                                un examen clínico completo y fotos intraorales.
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="faq-item">
-                    <button class="w-full py-6 flex justify-between items-center text-left focus:outline-none group"
-                        aria-expanded="false" onclick="toggleFaq(this)">
-                        <span
-                            class="font-sans font-semibold text-lg text-charcoal group-hover:text-accent transition-colors">¿Qué
-                            esperar en tu primera visita?</span>
-                        <span class="icon-plus text-2xl text-accent transition-transform duration-300">+</span>
-                    </button>
-                    <div class="faq-content">
-                        <div class="pb-6 text-taupe  font-sans leading-relaxed">
-                            La evaluación inicial está diseñada para ofrecer un diagnóstico integral de tu salud bucal.
-                            Durante esta visita, busco comprender tus necesidades y objetivos, resolver todas tus dudas
-                            y proponerte el tratamiento más adecuado.
-                            <br><br>
-                            Te explicaré de manera clara tu situación dental y las opciones disponibles, para que tomes
-                            decisiones informadas con tranquilidad. Mi objetivo es que te sientas acompañado en cada
-                            etapa del tratamiento, recibiendo una atención cercana, profesional y enfocada en tu
-                            bienestar.
-                        </div>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="w-full py-6 flex justify-between items-center text-left focus:outline-none group"
-                        aria-expanded="false" onclick="toggleFaq(this)">
-                        <span
-                            class="font-sans font-semibold text-lg text-charcoal group-hover:text-accent transition-colors">¿Atienden
-                            urgencias dentales?</span>
-                        <span class="icon-plus text-2xl text-accent transition-transform duration-300">+</span>
-                    </button>
-                    <div class="faq-content">
-                        <div class="pb-6 text-taupe  font-sans leading-relaxed">
-                            [Por definir copy final] Sí, atendemos urgencias dentales enfocadas en dolor agudo,
-                            fracturas de dientes o problemas
-                            con prótesis. Por favor contáctanos vía WhatsApp para evaluar disponibilidad inmediata.
-                        </div>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="w-full py-6 flex justify-between items-center text-left focus:outline-none group"
-                        aria-expanded="false" onclick="toggleFaq(this)">
-                        <span
-                            class="font-sans font-semibold text-lg text-charcoal group-hover:text-accent transition-colors">¿Qué
-                            seguros o convenios tienen?</span>
-                        <span class="icon-plus text-2xl text-accent transition-transform duration-300">+</span>
-                    </button>
-                    <div class="faq-content">
-                        <div class="pb-6 text-taupe  font-sans leading-relaxed">
-                            [Por definir copy final] Trabajamos de manera particular para asegurar la máxima calidad.
-                            Entregamos toda la documentación necesaria para reembolso en tu Isapre o Seguro
-                            Complementario.
-                        </div>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="w-full py-6 flex justify-between items-center text-left focus:outline-none group"
-                        aria-expanded="false" onclick="toggleFaq(this)">
-                        <span
-                            class="font-sans font-semibold text-lg text-charcoal group-hover:text-accent transition-colors">¿Cuánto
-                            dura una evaluación?</span>
-                        <span class="icon-plus text-2xl text-accent transition-transform duration-300">+</span>
-                    </button>
-                    <div class="faq-content">
-                        <div class="pb-6 text-taupe  font-sans leading-relaxed">
-                            [Por definir copy final] La consulta de diagnóstico dura aprox. 30 a 45 minutos. Realizamos
-                            un examen clínico completo y fotos intraorales.
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
     </main>
 
@@ -569,8 +548,9 @@
                     </p>
                     <p class="flex items-center gap-3">
                         <i class="fas fa-phone text-accent"></i>
-                        <a href="https://wa.me/56932404255?text=Hola%21%20me%20gustar%C3%ADa%20pedir%20hora%20con%20la%20Dra.%20Javiera%20Nally" 
-                           class="hover:text-accent transition-colors underline-offset-4 hover:underline">+56 9 3240 4255</a>
+                        <a href="https://wa.me/56932404255?text=Hola%21%20me%20gustar%C3%ADa%20pedir%20hora%20con%20la%20Dra.%20Javiera%20Nally"
+                            class="hover:text-accent transition-colors underline-offset-4 hover:underline">+56 9 3240
+                            4255</a>
                     </p>
                 </div>
             </div>
@@ -585,8 +565,9 @@
                     </p>
                     <p class="flex items-center gap-3">
                         <i class="fas fa-phone text-accent"></i>
-                        <a href="https://wa.me/56966464899?text=Hola%21%20me%20gustar%C3%ADa%20pedir%20hora%20con%20la%20Dra.%20Javiera%20Nally" 
-                           class="hover:text-accent transition-colors underline-offset-4 hover:underline">+56 9 6646 4899</a>
+                        <a href="https://wa.me/56966464899?text=Hola%21%20me%20gustar%C3%ADa%20pedir%20hora%20con%20la%20Dra.%20Javiera%20Nally"
+                            class="hover:text-accent transition-colors underline-offset-4 hover:underline">+56 9 6646
+                            4899</a>
                     </p>
                 </div>
             </div>
@@ -598,21 +579,22 @@
                     <p>Verifica mis títulos universitarios en la Superintendencia de Salud <b>Código 282469</b>.</p>
                     <div class="flex flex-col gap-3 pt-2">
                         <a href="https://rnpi.superdesalud.gob.cl/" target="_blank" rel="noopener noreferrer"
-                           class="inline-flex items-center gap-2 hover:text-accent transition-colors">
+                            class="inline-flex items-center gap-2 hover:text-accent transition-colors">
                             <i class="fas fa-external-link-alt"></i> Registro Nacional de Prestadores
                         </a>
-                        <a href="certificado-sis.pdf" download 
-                           class="inline-flex items-center gap-2 hover:text-accent transition-colors">
+                        <a href="certificado-sis.pdf" download
+                            class="inline-flex items-center gap-2 hover:text-accent transition-colors">
                             <i class="fas fa-file-pdf text-lg"></i> Descarga Certificado SIS
                         </a>
                     </div>
                 </div>
-                </div>
             </div>
+        </div>
 
         </div>
 
-        <div class="container mx-auto max-w-6xl mt-20 pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] uppercase tracking-widest opacity-40">
+        <div
+            class="container mx-auto max-w-6xl mt-20 pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] uppercase tracking-widest opacity-40">
             <p>&copy; <span id="currentYear"></span> Dra. Javiera Nally - Especialista en Rehabilitación Oral</p>
             <p>Viña del Mar &middot; Concón &middot; Chile</p>
         </div>

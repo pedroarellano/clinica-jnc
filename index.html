@@ -24,7 +24,7 @@
     <meta property="twitter:description" content="Consigue una hora al Dentista en Viña del Mar o Concón. Odontología mínimamente invasiva para resultados duraderos y naturales.">
     <meta property="twitter:image" content="https://dra.javieranally.cl/Imagen-hero.jpg">
 
-    <link rel="preload" as="image" href="Imagen-hero.jpg">
+    <link rel="preload" as="image" href="Imagen-hero-mobile-v2.jpg" imagesrcset="Imagen-hero-mobile-v2.jpg 600w, Imagen-hero-mobile.jpg 800w, Imagen-hero.jpg 1837w" imagesizes="(max-width: 768px) 100vw, 50vw" fetchpriority="high">
     <link rel="stylesheet" href="dist/styles.css">
     
     <!-- Non-blocking Fonts & Icons -->
@@ -238,8 +238,9 @@
                         <!-- HERO IMAGE -->
                         <div class="w-full h-full relative text-right">
                             <img src="Imagen-hero.jpg" 
-                                 srcset="Imagen-hero-mobile.jpg 800w, Imagen-hero.jpg 1837w"
+                                 srcset="Imagen-hero-mobile-v2.jpg 600w, Imagen-hero-mobile.jpg 800w, Imagen-hero.jpg 1837w"
                                  sizes="(max-width: 768px) 100vw, 50vw"
+                                 fetchpriority="high"
                                  alt="Imagen decorativa alusiva a una sonrisa"
                                  class="w-full h-auto ml-auto inline-block" width="1837" height="1141" loading="eager">
                         </div>
@@ -367,11 +368,13 @@
                                 del sector</span>
                         </div>
                     </div>
-                    <div class="mx-6 md:mx-10 h-56 bg-sand rounded-[2rem] overflow-hidden shadow-inner">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344.87028169212!2d-71.55160862425661!3d-33.02040057356264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689e0d9b4b0e60b%3A0x7d6a5a4a5a5a5a5a!2sAv.%20Libertad%20269%2C%20Vi%C3%B1a%20del%20Mar%2C%20Valpara%C3%ADso!5e0!3m2!1ses-419!2scl!4v1703463820000"
-                            class="w-full h-full border-0" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade" title="Ubicación en Viña del Mar"></iframe>
+                    <div id="map-vina" class="mx-6 md:mx-10 h-56 bg-sage rounded-[2rem] overflow-hidden shadow-inner flex flex-col items-center justify-center text-center p-4 cursor-pointer hover:bg-taupe/5 transition-colors group" 
+                         onclick="loadMap('map-vina', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344.87028169212!2d-71.55160862425661!3d-33.02040057356264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689e0d9b4b0e60b%3A0x7d6a5a4a5a5a5a5a!2sAv.%20Libertad%20269%2C%20Vi%C3%B1a%20del%20Mar%2C%20Valpara%C3%ADso!5e0!3m2!1ses-419!2scl!4v1703463820000')">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md group-hover:scale-110 transition-transform mb-3">
+                            <i class="fas fa-map-marked-alt text-accent text-2xl"></i>
+                        </div>
+                        <span class="text-charcoal font-bold text-sm">Ver mapa interactivo (Viña del Mar)</span>
+                        <span class="text-[10px] text-taupe uppercase tracking-widest mt-1">Clic para cargar mapa</span>
                     </div>
                     <div class="p-6 md:p-10 flex flex-col items-center">
                         <a href="https://wa.me/56932404255?text=Hola%21%20me%20gustar%C3%ADa%20pedir%20hora%20con%20la%20Dra.%20Javiera%20Nally"
@@ -403,11 +406,13 @@
                             <span>Estacionamiento pagado disponible en el edificio.</span>
                         </div>
                     </div>
-                    <div class="mx-6 md:mx-10 h-56 bg-sand rounded-[2rem] overflow-hidden shadow-inner">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.1648!2d-71.5323!3d-32.9345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689ddb6b0b0b0b0%3A0x1d1d1d1d1d1d1d1d!2sLas%20Pelargonias%20842%2C%20Conc%C3%B3n!5e0!3m2!1ses-419!2scl!4v1703463920000"
-                            class="w-full h-full border-0" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade" title="Ubicación en Concón"></iframe>
+                    <div id="map-concon" class="mx-6 md:mx-10 h-56 bg-sage rounded-[2rem] overflow-hidden shadow-inner flex flex-col items-center justify-center text-center p-4 cursor-pointer hover:bg-taupe/5 transition-colors group"
+                         onclick="loadMap('map-concon', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.1648!2d-71.5323!3d-32.9345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689ddb6b0b0b0b0%3A0x1d1d1d1d1d1d1d1d!2sLas%20Pelargonias%20842%2C%20Conc%C3%B3n!5e0!3m2!1ses-419!2scl!4v1703463920000')">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md group-hover:scale-110 transition-transform mb-3">
+                            <i class="fas fa-map-marked-alt text-accent text-2xl"></i>
+                        </div>
+                        <span class="text-charcoal font-bold text-sm">Ver mapa interactivo (Concón)</span>
+                        <span class="text-[10px] text-taupe uppercase tracking-widest mt-1">Clic para cargar mapa</span>
                     </div>
                     <div class="p-6 md:p-10 flex flex-col items-center">
                         <a href="https://wa.me/56966464899?text=Hola%21%20me%20gustar%C3%ADa%20pedir%20hora%20con%20la%20Dra.%20Javiera%20Nally"
@@ -695,6 +700,14 @@
             // Auto-update Year
             document.getElementById('currentYear').textContent = new Date().getFullYear();
         });
+
+        // Hybrid Map Loader
+        function loadMap(containerId, iframeSrc) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = `<iframe src="${iframeSrc}" class="w-full h-full border-0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa"></iframe>`;
+            container.classList.remove('cursor-pointer', 'flex', 'flex-col', 'items-center', 'justify-center', 'text-center', 'p-4', 'hover:bg-taupe/5', 'group');
+            container.onclick = null; // Prevent re-triggering
+        }
     </script>
 </body>
 

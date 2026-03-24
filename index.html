@@ -25,8 +25,16 @@
     <meta property="twitter:image" content="https://dra.javieranally.cl/Imagen-hero.jpg">
 
     <link rel="preload" as="image" href="Imagen-hero.jpg">
-
-    <!-- Schema.org - Medical Business & FAQ -->
+    <link rel="stylesheet" href="dist/styles.css">
+    
+    <!-- Non-blocking Fonts & Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Noto+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -91,31 +99,7 @@
         href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        charcoal: '#0F172A',
-                        taupe: '#475569',
-                        accent: '#10B981',
-                        'accent-dark': '#047857',
-                        sand: '#FFFFFF',
-                        sage: '#F1F5F3',
-                    },
-                    fontFamily: {
-                        sans: ['Noto Sans', 'sans-serif'],
-                        serif: ['DM Serif Display', 'serif'],
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- NO TAILWIND PLAY CDN - Using dist/styles.css -->
     <style>
         body {
             background-color: #FFFFFF;
@@ -253,8 +237,11 @@
 
                         <!-- HERO IMAGE -->
                         <div class="w-full h-full relative text-right">
-                            <img src="Imagen-hero.jpg" alt="Imagen decorativa alusiva a una sonrisa"
-                                class="w-full h-auto ml-auto inline-block" width="1837" height="1141" loading="eager">
+                            <img src="Imagen-hero.jpg" 
+                                 srcset="Imagen-hero-mobile.jpg 800w, Imagen-hero.jpg 1837w"
+                                 sizes="(max-width: 768px) 100vw, 50vw"
+                                 alt="Imagen decorativa alusiva a una sonrisa"
+                                 class="w-full h-auto ml-auto inline-block" width="1837" height="1141" loading="eager">
                         </div>
                     </div>
                 </div>
